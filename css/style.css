@@ -66,3 +66,65 @@ figure {
     cursor: pointer;
     outline: none;
   }
+/*------header------*/
+.header {
+    margin-bottom: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: blue;
+}
+
+.header__title  {
+    text-align: center;
+    color: aliceblue;
+}
+
+/*------content------*/
+
+.section-default {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.section-title  {
+    margin-bottom: 30px;
+    color: crimson;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/*-------------CHECKBOX STYLIZATION------------*/
+.label-2    {
+    position: relative;
+    padding-left: 20px;
+    cursor: pointer;
+}
+#check-2    {
+    display: none;
+    pointer-events: none;
+}
+
+#check-2 + span {
+   position: absolute; 
+   top: 0;
+   left: 0;
+   width: 20px;
+   height: 20px;
+   text-align: center;
+    border: 1px solid #787878;
+}
+
+#check-2 + span::before {
+    content: '\2713';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity .3s ease-in-out ;
+}
+
+#check-2:checked + span::before {
+    opacity: 1;
+}
